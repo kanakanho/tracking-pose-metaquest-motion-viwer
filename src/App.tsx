@@ -3,7 +3,8 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { useEffect, useRef, useState } from 'react';
 import type { Distances, Quaternions } from './types/type';
-import FetchFileData from './components/fetchFileData/fetchFileData';
+import FetchFileData from './components/fetchFileData/FetchFileData';
+
 
 function App() {
   const [quaternionData, setQuaternionData] = useState<Quaternions>([]);
@@ -47,7 +48,7 @@ function App() {
 
       // カメラを作成
       const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 1, 10000);
-      camera.position.set(3, 5, 5);
+      camera.position.set(5, 30, 5);
 
       // カメラコントローラーを作成
       const controls = new OrbitControls(camera, canvas);
